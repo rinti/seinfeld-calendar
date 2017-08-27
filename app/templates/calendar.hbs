@@ -1,0 +1,17 @@
+{{#each model as |month|}}
+  <h2>{{moment-format month.month "MMMM"}}</h2>
+  <ul class="days">
+    <li>Mon</li>
+    <li>Tue</li>
+    <li>Wed</li>
+    <li>Thu</li>
+    <li>Fri</li>
+    <li>Sat</li>
+    <li>Sun</li>
+  </ul>
+    <ul>
+      {{#each month.days as |day|}}
+        {{calendar-day day=day}}
+      {{/each}}
+    </ul>
+{{/each}}
